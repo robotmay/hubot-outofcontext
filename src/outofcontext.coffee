@@ -42,7 +42,7 @@ module.exports = (robot) ->
   robot.respond /outofcontext|ooc (?!rm )(.*?): (.*)/i, (msg) ->
     findUser robot, msg, msg.match[1], (user) ->
       appendQuote(robot.brain.data.oocQuotes, user, msg.match[2])
-      msg.send "Quote has been stored for future prosperity."
+      msg.send "Quote has been stored for future posterity."
 
   robot.respond /outofcontext|ooc rm (.*?): (.*)/i, (msg) ->
     findUser robot, msg, msg.match[1], (user) ->
